@@ -1,0 +1,6 @@
+export function setByPath(object, path, value) { const keys = path.split("."); const last = keys.pop(); const target = keys.reduce((current, key) => (current[key] ??= {}), object); target[last] = value; return object; }
+export function getByPath(object, path) { return path.split(".").reduce((value, key) => value?.[key], object); }
+export function debounce(callback, delay = 120) { let timeoutId; return (...args) => { clearTimeout(timeoutId); timeoutId = setTimeout(() => callback(...args), delay); }; }
+export function clamp(value, min, max) { return Math.min(max, Math.max(min, Number(value))); }
+export function shortcutMatches(event, shortcut) { const parts = shortcut?.toLowerCase().split("+").map((part) => part.trim()) ?? []; const key = parts.at(-1); return event.key.toLowerCase() === key && event.altKey === parts.includes("alt") && event.ctrlKey === parts.includes("ctrl") && event.shiftKey === parts.includes("shift") && event.metaKey === parts.includes("meta"); }
+export function downloadJson(filename, data) { const url = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: "application/json" })); const anchor = document.createElement("a"); anchor.href = url; anchor.download = filename; anchor.click(); URL.revokeObjectURL(url); }

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "WA Canvas - Themes & Privacy for WhatsApp Web",
+  "version": "1.0.0",
+  "description": "Make WhatsApp Web yours with themes, privacy tools, focus modes, accessibility controls, and optional Groq AI.",
+  "permissions": ["storage", "unlimitedStorage"],
+  "host_permissions": ["https://web.whatsapp.com/*", "https://api.groq.com/*"],
+  "background": { "service_worker": "background/service-worker.js", "type": "module" },
+  "action": { "default_title": "WA Canvas", "default_popup": "popup/popup.html", "default_icon": { "16": "assets/icons/icon-16.png", "32": "assets/icons/icon-32.png", "48": "assets/icons/icon-48.png", "128": "assets/icons/icon-128.png" } },
+  "options_page": "options/options.html",
+  "content_scripts": [{ "matches": ["https://web.whatsapp.com/*"], "js": ["content/content.js"], "css": ["content/content.css"], "run_at": "document_idle" }],
+  "icons": { "16": "assets/icons/icon-16.png", "32": "assets/icons/icon-32.png", "48": "assets/icons/icon-48.png", "128": "assets/icons/icon-128.png" },
+  "web_accessible_resources": [{ "resources": ["assets/logo.svg"], "matches": ["https://web.whatsapp.com/*"] }]
+}
