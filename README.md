@@ -12,7 +12,8 @@ Make WhatsApp Web feel like your space. WA Canvas is a free, open-source Chrome 
 - Use panic, focus, zen, reading, compact, and collapsed-sidebar modes.
 - Improve readability with larger text, stronger contrast, reduced motion, and color-blind-friendly palettes.
 - Find visible chats quickly with a keyboard command.
-- Optionally use Groq AI to draft replies, summarize pasted text, or improve your writing.
+- Use your own Grok/xAI, Groq, OpenAI, OpenRouter, Together AI, or custom OpenAI-compatible API to draft replies, summarize, translate, and improve writing.
+- Speak into the AI panel with Chrome's microphone-powered speech recognition.
 
 ## Install it locally
 
@@ -25,17 +26,17 @@ Make WhatsApp Web feel like your space. WA Canvas is a free, open-source Chrome 
 
 Open the extension popup and choose **Open full settings** to customize everything.
 
-## Groq AI setup
+## AI setup
 
 AI is completely optional.
 
-1. Create an API key in the Groq Console.
+1. Create an API key with your chosen provider.
 2. Open **WA Canvas settings → AI-ready panel**.
-3. Paste the real key beginning with `gsk_`.
+3. Choose the provider, endpoint, and model, then paste your key.
 4. Click **Save & test**.
 5. Refresh WhatsApp Web and click the floating **AI** button.
 
-The extension sends only the text you manually paste into the AI box. It does not automatically read or upload your chats. Your Groq usage is also subject to Groq's terms and privacy policy.
+The extension sends only the text you manually type, paste, or dictate into the AI box. It does not automatically read or upload your chats. AI usage is subject to your chosen provider's terms and privacy policy.
 
 ## Privacy, safety, and WhatsApp rules
 
