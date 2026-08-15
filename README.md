@@ -9,6 +9,7 @@
 Themes, wallpapers, privacy blurs, focus modes, accessibility controls and an
 optional bring-your-own-key AI panel — as a local layer over WhatsApp Web.
 
+[![CI](https://github.com/ANSHUL-REAL/wa-canvas/actions/workflows/ci.yml/badge.svg)](https://github.com/ANSHUL-REAL/wa-canvas/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-25d366.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/manifest-v3-4285F4.svg)](manifest.json)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-25d366.svg)](package.json)
