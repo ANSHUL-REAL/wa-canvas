@@ -1,0 +1,34 @@
+{
+  "name": "wa-canvas",
+  "version": "1.0.0",
+  "description": "Themes, wallpapers, privacy blurs, focus modes, accessibility controls and an optional bring-your-own-key AI panel for WhatsApp Web. Zero-dependency Manifest V3 extension.",
+  "private": true,
+  "license": "MIT",
+  "author": "Anshul Nautiyal",
+  "homepage": "https://github.com/ANSHUL-REAL/wa-canvas#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ANSHUL-REAL/wa-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ANSHUL-REAL/wa-canvas/issues"
+  },
+  "keywords": [
+    "chrome-extension",
+    "browser-extension",
+    "manifest-v3",
+    "whatsapp-web",
+    "themes",
+    "dark-theme",
+    "privacy",
+    "accessibility",
+    "productivity"
+  ],
+  "scripts": {
+    "validate": "node tools/validate.js",
+    "zip": "node tools/pack.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {},
+  "devDependencies": {}
+}

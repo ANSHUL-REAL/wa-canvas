@@ -1,0 +1,64 @@
+name: ✨ Feature request
+description: Suggest a new control or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you write — WA Canvas is a **visual layer**, permanently. It will
+        never add message automation, bulk or scheduled sending, contact
+        scraping, or anything that touches encryption. It will also never add
+        analytics or any outbound request you did not trigger yourself.
+        See [CONTRIBUTING.md](../blob/master/CONTRIBUTING.md#what-will-not-be-merged).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: Describe the annoyance, not the solution — it often has a simpler fix than you'd think.
+      placeholder: People walk behind my desk and I want the chat list hidden without turning everything off.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you have in mind
+    validations:
+      required: true
+
+  - type: dropdown
+    id: section
+    attributes:
+      label: Which settings section would it live in
+      options:
+        - Themes
+        - Appearance
+        - Backgrounds
+        - Privacy
+        - Productivity
+        - Accessibility
+        - AI panel
+        - Shortcuts
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: default
+    attributes:
+      label: Should it be on by default?
+      description: The bar for default-on is high — it must be safe enough that it cannot break the page.
+      options:
+        - "No, opt-in"
+        - "Yes, on by default"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not send messages, automate anything, or read chats without me asking
+          required: true

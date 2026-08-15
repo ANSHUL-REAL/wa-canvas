@@ -4,3 +4,21 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Packaging output
+*.zip
+*.crx
+*.pem
+dist/
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp
+desktop.ini
+
+# WA Canvas ships zero dependencies — none of this should ever appear
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

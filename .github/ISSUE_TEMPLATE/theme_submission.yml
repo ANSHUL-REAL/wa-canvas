@@ -1,0 +1,61 @@
+name: 🎨 Theme submission or idea
+description: Propose a new colour preset
+labels: ["theme", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Themes are the easiest way to contribute — one object in
+        `shared/themes.js` and the settings UI picks it up automatically.
+        You can open this issue with just an idea, or go straight to a pull
+        request. See [CONTRIBUTING.md](../blob/master/CONTRIBUTING.md#adding-a-theme).
+
+  - type: input
+    id: name
+    attributes:
+      label: Theme name
+      placeholder: Nord
+    validations:
+      required: true
+
+  - type: input
+    id: description
+    attributes:
+      label: One-line description
+      description: Shown on the theme card in settings.
+      placeholder: Cool arctic blues
+    validations:
+      required: true
+
+  - type: textarea
+    id: colors
+    attributes:
+      label: Colours
+      description: All nine keys. A missing one inherits whatever was applied before and looks broken.
+      value: |
+        accent:
+        sidebar:
+        chatBackground:
+        header:
+        surface:
+        text:
+        mutedText:
+        outgoingBubble:
+        incomingBubble:
+      render: yaml
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contrast
+    attributes:
+      label: Readability
+      options:
+        - label: I checked that text is readable against the chat background and both bubble colours (WCAG AA, 4.5:1)
+        - label: I checked it with a wallpaper on as well as off
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in. Please crop out any real chats.

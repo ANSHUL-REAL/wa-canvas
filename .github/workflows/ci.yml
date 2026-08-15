@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  validate:
+    name: Validate extension
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Syntax, manifest, theme and network-surface checks
+        run: node tools/validate.js
+
+      - name: No dependencies crept in
+        run: |
+          test ! -f package-lock.json || (echo "::error::WA Canvas ships zero dependencies" && exit 1)
+          test ! -d node_modules || (echo "::error::node_modules must not be committed" && exit 1)

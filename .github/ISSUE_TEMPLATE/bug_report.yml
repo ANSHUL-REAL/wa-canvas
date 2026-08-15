@@ -1,0 +1,80 @@
+name: 🐛 Bug report
+description: Something in WA Canvas stopped working
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. WhatsApp Web changes its markup regularly, so
+        "this worked last week" is the most common bug here — and still useful.
+
+        **Please do not paste API keys, phone numbers, or screenshots containing
+        real chats.** Blur or crop first.
+
+        **One 10-second check:** flip the master switch off in the popup. If the
+        problem is still there, it's WhatsApp, not WA Canvas.
+
+  - type: checkboxes
+    id: master
+    attributes:
+      label: Master-switch check
+      options:
+        - label: I turned WA Canvas off and the problem went away (so it is us)
+          required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you expect, and what did you get instead?
+      placeholder: The chat-list blur stopped applying after WhatsApp updated, but the conversation blur still works.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where
+      multiple: true
+      options:
+        - Chat list / sidebar
+        - Open conversation
+        - Wallpaper
+        - Privacy blurs or panic mode
+        - Focus / zen / reading mode
+        - Quick navigation (Alt+K)
+        - AI panel
+        - Keyboard shortcuts
+        - The popup
+        - The settings page
+    validations:
+      required: true
+
+  - type: input
+    id: theme
+    attributes:
+      label: Which theme
+      placeholder: Dark, AMOLED, custom palette…
+    validations:
+      required: true
+
+  - type: textarea
+    id: settings
+    attributes:
+      label: Which settings were on
+      description: A screenshot of the settings page is perfect — just crop out anything personal.
+
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output
+      description: "F12 → Console. Anything red, especially lines mentioning WA Canvas."
+      render: text
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 141 on Windows 11
+    validations:
+      required: true
